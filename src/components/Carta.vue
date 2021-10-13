@@ -63,7 +63,7 @@ export default {
         //datos a actualizar
       }
       console.log("editar");
-       let url = "https://admiring-heisenberg-05a4d7.netlify.app/mascota/" + this.id
+       let url = "https://mascotas-backend.herokuapp.com/mascota/" + this.id
        axios.put(url,data).then(res =>{
        console.log(res.data)
        location.reload()
@@ -75,7 +75,7 @@ export default {
     
     eliminar() {
      console.log("eliminar");
-     let url = "https://admiring-heisenberg-05a4d7.netlify.app/mascota/" + this.id
+     let url = "https://mascotas-backend.herokuapp.com/mascota/" + this.id
      axios.delete(url).then(res =>{
        console.log(res.data)
        location.reload()

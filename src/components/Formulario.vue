@@ -109,7 +109,7 @@ export default {
         clave: this.clave,
       };
       if (this.$refs.form.validate()) {
-        axios.post("https://admiring-heisenberg-05a4d7.netlify.app/usuario/", datos).then (res =>{
+        axios.post("https://mascotas-backend.herokuapp.com/usuario/", datos).then (res =>{
           console.log("Usuario registrado");
         }).catch((error)=>{
           console.log("Error")
