@@ -22,18 +22,22 @@
       </v-btn> -->
     </v-app>
   </div>
+  <Cerrar></Cerrar>
   </div>
 </template>
 
 <script>
 import Mascota from "../components/Mascota.vue";
 import Navegacion from "../components/Navegacion.vue";
+import Cerrar from '../components/Cerrar.vue';
+
 
 export default {
   name: "InsMascota",
   components: {
     Mascota,
     Navegacion,
+    Cerrar,
   },
   // nuevamascota() {
   //     this.$refs.Mascota

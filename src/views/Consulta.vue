@@ -21,9 +21,9 @@
         lg="3">
           <Carta :id="mascota._id" :nombreMascota="mascota.nombre_mascota" :edad="mascota.edad_mascota" :raza="mascota.raza_mascota" :tipo="mascota.tipo_mascota"></Carta>
         </v-col>
-        
       </v-row>
     </v-card>
+     <Cerrar></Cerrar>
   </div>
   </div>
 </template>
@@ -31,13 +31,16 @@
 <script>
 //import Busqueda from '../components/Busqueda.vue'
 import Carta from '../components/Carta.vue'
+//import Cerrar from '../components/Cerrar.vue'
 import axios from "axios"
+import Cerrar from '../components/Cerrar.vue'
 
 export default {
   name: "Consulta",
   components: {
     //Busqueda,
-    Carta  
+    Carta,
+    Cerrar  
   },
 
   data(){
