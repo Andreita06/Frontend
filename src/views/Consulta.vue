@@ -19,7 +19,7 @@
         sm="6"
         md="4"
         lg="3">
-          <Carta :id="mascota._id" :nombreMascota="mascota.nombre_mascota" ultimaFechaV="31/08/2021" descripcion="Vacuna Séxtuple"></Carta>
+          <Carta :id="mascota._id" :nombreMascota="mascota.nombre_mascota" :edad="mascota.edad_mascota" :raza="mascota.raza_mascota" :tipo="mascota.tipo_mascota"></Carta>
         </v-col>
         
       </v-row>

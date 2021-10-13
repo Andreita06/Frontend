@@ -6,9 +6,9 @@
           {{ nombreMascota }}
         </div>
         <v-list-item-title class="mb-1">
-          {{ descripcion }}
+          {{ edad }}
         </v-list-item-title>
-        <v-list-item-subtitle>{{ ultimaFechaV }}</v-list-item-subtitle>
+        <v-list-item-subtitle>{{ tipo }}</v-list-item-subtitle>
       </v-list-item-content>
 
       <v-avatar size="125">
@@ -17,7 +17,7 @@
     </v-list-item>
 
     <v-card-actions class="j-center">
-      <v-btn color="primary" outlined tile text> Editar </v-btn>
+      <editar-mascota :id="id" :edad="edad" :raza="raza" :tipo="tipo" :nombre="nombreMascota"></editar-mascota>
       <v-btn color="error" outlined tile text v-on:click='eliminar'> Eliminar </v-btn>
     </v-card-actions>
 
@@ -31,7 +31,9 @@
 
 <script>
 import axios from "axios";
+import EditarMascota from './EditarMascota.vue';
 export default {
+  components: { EditarMascota },
   data: () => {
     return {
       AlertaNotificacion: true
@@ -53,26 +55,13 @@ export default {
 
   props: {
     nombreMascota: String,
-    ultimaFechaV: String,
-    descripcion: String,
-    id: String
+    id: String,
+    tipo: String,
+    raza: String,
+    edad: Number,
   },
   methods: {
-    editar() {
-      data={
-        //datos a actualizar
-      }
-      console.log("editar");
-       let url = "https://mascotas-backend.herokuapp.com/mascota/" + this.id
-       axios.put(url,data).then(res =>{
-       console.log(res.data)
-       location.reload()
-     }).catch(err =>{
-       console.log(err)
-     })
-     this.dialog = false
-    },
-    
+       
     eliminar() {
      console.log("eliminar");
      let url = "https://mascotas-backend.herokuapp.com/mascota/" + this.id

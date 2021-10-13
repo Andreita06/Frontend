@@ -107,14 +107,17 @@ export default {
     menu: false,
     tipos: ["Perro", "Gato"],
     razas: [
-     // "mini Pincher",
+      "mini Pincher",
       "Samoyedo",
       "Bulldog",
       "Sin raza",
       "San Bernardo",
       "Coccer Spanic",
+      "Siamese"
     ],
   }),
+
+
     watch: {
       menu (val) {
         val && setTimeout(() => (this.activePicker = 'YEAR'))
@@ -141,8 +144,11 @@ export default {
       if (this.$refs.form.validate()) {
         axios.post("https://mascotas-backend.herokuapp.com/mascota/", datos).then (res =>{
           console.log("mascota registrada");
+          window.alert("Registro Exitoso!")
+          this.$router.push("/consulta")
         }).catch((error)=>{
           console.log("Error")
+          window.alert("Error al registrar datos.")
         })
       }
     },
