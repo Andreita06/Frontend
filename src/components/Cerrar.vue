@@ -12,6 +12,7 @@ export default{
     methods:{
         cerrarSesion(){
             window.localStorage.removeItem('autenticacion');
+            console.log("sesion cerrada")
             this.$router.push({path: '/'});
         }
     }
