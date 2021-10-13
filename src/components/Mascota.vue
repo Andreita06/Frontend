@@ -107,13 +107,18 @@ export default {
     menu: false,
     tipos: ["Perro", "Gato"],
     razas: [
-      "mini Pincher",
+     "Mini Pincher",
       "Samoyedo",
       "Bulldog",
-      "Sin raza",
+      "Criollo",
+      "Schnauzer",
       "San Bernardo",
       "Coccer Spanic",
-      "Siamese"
+      "Siamese",
+      "Persa",
+      "Birmano",
+      "Oriental",
+      "Azul Ruso"
     ],
   }),
 
