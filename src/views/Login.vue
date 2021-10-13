@@ -5,7 +5,7 @@
   <div class="login">
     <v-card id="card" class="mx-auto" width="350">
       <!-- -->
-      <h1>INICIO SESIÓN</h1>
+      <h1>PET VACCINE</h1>
       <v-img src="../assets/MascotasVacunadas.jpg" height="180" contain></v-img>
       <!-- -->
       <v-card-text>
