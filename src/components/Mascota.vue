@@ -139,7 +139,7 @@ export default {
         notificacion: this.AlertaNotificacion,
       }
       if (this.$refs.form.validate()) {
-        axios.post("http://localhost:3000/mascota", datos).then (res =>{
+        axios.post("https://admiring-heisenberg-05a4d7.netlify.app/mascota/", datos).then (res =>{
           console.log("mascota registrada");
         }).catch((error)=>{
           console.log("Error")

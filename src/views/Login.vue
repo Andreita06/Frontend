@@ -82,7 +82,7 @@ export default {
       };
       if (this.$refs.form.validate()) {
         console.log(datos)
-        axios.post("https://mascotas-backend.herokuapp.com/login", datos).then (res =>{
+        axios.post("https://admiring-heisenberg-05a4d7.netlify.app/login/", datos).then (res =>{
           alert("" + res.data.mensaje);          
           
           if (res.data.mensaje != "exito"){

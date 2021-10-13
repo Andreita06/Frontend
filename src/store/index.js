@@ -18,13 +18,13 @@ export default new Vuex.Store({
   },
   actions: {
     async cargarUsusarios({commit}){
-      const peticion = await fetch('https://mascotas-backend.herokuapp.com/usuario');
+      const peticion = await fetch('https://admiring-heisenberg-05a4d7.netlify.app/usuario/');
       const data = await peticion.json();
       console.log(data);
       commit('setUsuarios', data);
     },
     async getMascota({commit}){
-      const peticion = await fetch('https://mascotas-backend.herokuapp.com/mascota');
+      const peticion = await fetch('https://admiring-heisenberg-05a4d7.netlify.app/mascota');
       const data = await peticion.json();
       console.log(data);
       commit('setMascotas', data)
