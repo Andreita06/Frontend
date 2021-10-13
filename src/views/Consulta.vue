@@ -50,7 +50,7 @@ export default {
   },
 
   mounted(){ 
-    axios.get("https://admiring-heisenberg-05a4d7.netlify.app/mascota_usuario/" + localStorage.getItem("usuario_id")).then(res =>{
+    axios.get("https://mascotas-backend.herokuapp.com/mascota_usuario/" + localStorage.getItem("usuario_id")).then(res =>{
       this.mascotas = res.data
     }).catch(error =>{
       console.log("Error", error)
