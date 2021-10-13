@@ -121,7 +121,7 @@ export default {
        let url = "https://mascotas-backend.herokuapp.com/mascota/" + this.id
        axios.put(url,datos).then(res =>{
        console.log(res.data)
-       //location.reload()
+       location.reload()
      }).catch(err =>{
        console.log(err)
      })
