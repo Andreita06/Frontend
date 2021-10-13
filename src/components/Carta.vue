@@ -67,7 +67,7 @@ export default {
      let url = "https://mascotas-backend.herokuapp.com/mascota/" + this.id
      axios.delete(url).then(res =>{
        console.log(res.data)
-       location.reload()
+       //location.reload()
      }).catch(err =>{
        console.log(err)
      })
